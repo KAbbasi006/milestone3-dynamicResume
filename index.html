@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Static Resume Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Dynamic Resume</h1> <br>
+
+    <!-- User Input Form -->
+    <form id="resume-form">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" placeholder="Your full name" required><br>
+
+        <label for="father-name">Father's Name:</label>
+        <input type="text" id="father-name" placeholder="Father's Name" required>
+
+        <label for="designation">Designation:</label>
+        <input type="text" id="designation" placeholder="Your Designation">
+
+        <label for="about-me">About Me:</label>
+        <textarea id="about-me" placeholder="About yourself"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Contact Information</legend>
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" placeholder="Phone Number">
+        
+        <label for="address">Address:</label>
+        <input type="text" id="address" placeholder="Address">
+        
+        <label for="email">Email:</label>
+        <input type="text" id="email" placeholder="Email">
+
+        <label for="linkedin">LinkedIn URL:</label>
+        <input type="url" id="linkedin" placeholder="LinkedIn Profile URL">
+
+        <label for="github">GitHub URL:</label>
+        <input type="url" id="github" placeholder="GitHub Profile URL">
+      </fieldset>
+
+      <fieldset>
+        <legend>Education</legend>
+        <input type="text" id="education" placeholder="Your Education">
+      </fieldset>
+
+      <fieldset>
+        <legend>Skills</legend>
+        <input type="text" id="skills" placeholder="Skills (comma-separated)">
+      </fieldset>
+
+      <fieldset>
+        <legend>Work Experience</legend>
+        <input type="text" id="experience" placeholder="Your Work Experience">
+      </fieldset>
+
+      <button type="button" id="generate-btn">Generate Resume</button>
+      <button type="button" id="download-btn" style="display: none;">Download Resume</button>
+    </form>
+
+    <!-- Resume Preview Section -->
+    <section id="resume-preview" style="display: none;">
+      <h2>Resume Preview</h2>
+      <div id="resume-content">
+        <div id="preview-personal-info"></div>
+        <div id="preview-contact-info"></div>
+        <div id="preview-education"></div>
+        <div id="preview-skills"></div>
+        <div id="preview-experience"></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
